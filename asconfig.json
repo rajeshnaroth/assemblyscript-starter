@@ -1,0 +1,21 @@
+{
+  "entries": ["./src/as/add.ts", "./src/as/multiply.ts"],
+  "targets": {
+    "debug": {
+      "binaryFile": "build/wasm/main-debug.wasm",
+      "textFile": "build/wasm/main-debug.wat",
+      "sourceMap": true,
+      "debug": true
+    },
+    "release": {
+      "binaryFile": "build/wasm/main.wasm",
+      "textFile": "build/wasm/main.wat",
+      "sourceMap": true,
+      "optimizeLevel": 3,
+      "shrinkLevel": 0,
+      "converge": false,
+      "noAssert": false
+    }
+  },
+  "options": {}
+}

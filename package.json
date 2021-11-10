@@ -1,0 +1,26 @@
+{
+  "name": "assemblyscript-starter",
+  "version": "1.0.0",
+  "description": "A starter template for AssemblyScript",
+  "main": "index.js",
+  "scripts": {
+    "build-js": "rollup src/js/main.js --file build/js/bundle.js --format iife",
+    "build-as": "asc --target release",
+    "build": "npm run build-as && npm run build-js",
+    "test": "npm run build-as && node tests",
+    "http": "serve ./build -p 7000",
+    "site": "npm run build && npm run http",
+    "start": "nodemon --exec npm run site"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@assemblyscript/loader": "^0.19.17"
+  },
+  "devDependencies": {
+    "assemblyscript": "^0.19.18",
+    "nodemon": "^2.0.15",
+    "rollup": "^2.59.0",
+    "serve": "^13.0.2"
+  }
+}
